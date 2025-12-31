@@ -1,16 +1,12 @@
-import { Link } from "react-router-dom";
-
 export default function AboutUs() {
   return (
-    <div className="landing">
-      <h1>Welcome to Paradise Nursery</h1>
+    <div>
+      <h2>About Paradise Nursery</h2>
       <p>
-        Paradise Nursery is your one-stop destination for premium indoor
-        houseplants that bring life, freshness, and positivity to your home.
+        Paradise Nursery is dedicated to bringing nature closer to your home.
+        We provide a wide range of healthy indoor plants that improve air
+        quality and enhance living spaces.
       </p>
-      <Link to="/products">
-        <button>Get Started</button>
-      </Link>
     </div>
   );
 }
