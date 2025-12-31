@@ -1,20 +1,35 @@
 import { useDispatch } from "react-redux";
 import { addToCart, removeFromCart, deleteItem } from "../redux/CartSlice";
+import { Link } from "react-router-dom";
 
 export default function CartItem({ item }) {
   const dispatch = useDispatch();
 
+  const handleIncrement = () => dispatch(addToCart(item));
+  const handleDecrement = () => dispatch(removeFromCart(item.id));
+
   return (
-    <div className="cart-item">
+    <div>
+      <img src={item.image} alt={item.name} />
       <h4>{item.name}</h4>
       <p>Unit Price: ₹{item.price}</p>
-      <p>Total: ₹{item.price * item.quantity}</p>
+      <p>Total Cost: ₹{item.price * item.quantity}</p>
 
-      <button onClick={() => dispatch(removeFromCart(item.id))}>-</button>
+      <button onClick={handleDecrement}>-</button>
       <span>{item.quantity}</span>
-      <button onClick={() => dispatch(addToCart(item))}>+</button>
+      <button onClick={handleIncrement}>+</button>
 
       <button onClick={() => dispatch(deleteItem(item.id))}>Delete</button>
+
+      <br />
+
+      <Link to="/products">
+        <button>Continue Shopping</button>
+      </Link>
+
+      <button onClick={() => alert("Checkout Coming Soon")}>
+        Checkout
+      </button>
     </div>
   );
 }
