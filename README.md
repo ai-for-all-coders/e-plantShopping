@@ -1,14 +1,14 @@
 # Paradise Nursery Shopping Application
 
-A React and Redux based shopping cart application for an online plant nursery.
+Paradise Nursery is an online plant shop that allows users to browse various categories of houseplants and add them to a shopping cart.
 
 ## Features
 - Browse plants by category
-- Add plants to shopping cart
-- Increase, decrease, or delete items
-- Dynamic cart quantity and total cost
+- Add plants to cart
+- Increase or decrease quantities
+- View total items and total cost
 
-## Tech Stack
+## Technology Used
 - React
 - Redux Toolkit
 - React Router
